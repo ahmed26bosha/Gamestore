@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        <body>
+          
+            <div class="nav">
+            <h1 ><span class="er1">Game</span> <span class="er">Store</span></h1>
+            <a href="#" class="a1">Home</a>
+            <a href="#" class="a1">About Us</a>
+
+            <div class="container">
+                <div class="bg"></div>
+                <div class="input-wrapper">
+                <div class="input">
+                    <div class="glow left"></div>
+                    <div class="glow right"></div>
+              
+                    <input type="text" name="text" placeholder="ابحث عن ألعاب..." id="search-input" oninput="showSuggestions(this.value)" />
+              
+                    <div class="reflection"></div>
+              
+                    <div class="icon">
+                      <svg
+                        stroke="#fff"
+                        viewBox="0 0 38 38"
+                        height="1em"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="loading"
+                      >
+                        <g fill-rule="evenodd" fill="none">
+                          <g stroke-width="3" transform="translate(1 1)">
+                            <circle r="18" cy="18" cx="18" stroke-opacity=".2"></circle>
+                            <path d="M36 18c0-9.94-8.06-18-18-18"></path>
+                          </g>
+                        </g>
+                      </svg>
+              
+                      <svg
+                        viewBox="0 0 490.4 490.4"
+                        version="1.1"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="magnifier"
+                      >
+                        <path
+                          d="M484.1,454.796l-110.5-110.6c29.8-36.3,47.6-82.8,47.6-133.4c0-116.3-94.3-210.6-210.6-210.6S0,94.496,0,210.796   s94.3,210.6,210.6,210.6c50.8,0,97.4-18,133.8-48l110.5,110.5c12.9,11.8,25,4.2,29.2,0C492.5,475.596,492.5,463.096,484.1,454.796z    M41.1,210.796c0-93.6,75.9-169.5,169.5-169.5s169.6,75.9,169.6,169.5s-75.9,169.5-169.5,169.5S41.1,304.396,41.1,210.796z"
+                        ></path>
+                      </svg>
+                    </div>
+              
+                    <button class="filter">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1em"
+                          height="1em"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                          ></path>
+                        </svg>
+                      </span>
+                    </button>
+              
+                    <div class="result">
+                      <header class="result-header">
+                        <div style="--i:1">
+                          <input type="radio" id="all" name="tab" checked="" />
+                          <label for="all" data-label="All">
+                            <span>All</span>
+                          </label>
+                        </div>
+                        <div style="--i:2">
+                          <input type="radio" id="buttons" name="tab" />
+                          <label for="buttons" data-label="Buttons">
+                            <span>Buttons</span>
+                          </label>
+                        </div>
+                        <div style="--i:3">
+                          <input type="radio" id="cards" name="tab" />
+                          <label for="cards" data-label="Cards">
+                            <span>Cards</span>
+                          </label>
+                        </div>
+                        <div style="--i:4">
+                          <input type="radio" id="inputs" name="tab" />
+                          <label for="inputs" data-label="Inputs">
+                            <span>Inputs</span>
+                          </label>
+                        </div>
+                      </header>
+              
+                      <div class="result-content-header">
+                        <div style="--i:1">PubgMobile </div>
+                        <div style="--i:2">Spider-Man</div>
+                        <div style="--i:3">Naruto Shippuden</div>
+
+                      </div>
+              
+                      <div class="result-content">
+                        
+                        <div class="lava"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="glow-outline"></div>
+                  <div class="glow-layer-bg"></div>
+                  <div class="glow-layer-1"></div>
+                  <div class="glow-layer-2"></div>
+                  <div class="glow-layer-3"></div>
+                  <div class="glow left"></div>
+                  <div class="glow right"></div>
+                </div>
+            </div>
+            </div>
+            <!--image slider start-->
+    <div class="slider">
+      <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+          <img src="459214499_916457003847614_5807715374586471460_n.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="Screenshot 2024-09-13 181439.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="454547188_813165674307326_6988428303138919232_n.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="1433877248-call-of-duty-black-ops-iii-key-art.jpg" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+
+        <!--automatic navigation end-->
+      </div>
+      <!--manual navigation start-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+
+    <div class="oi">
+      <div class="card-container">
+        <div class="card">
+          <div class="discount-ribbon">50% OFF</div>
+          <img src="mass effect.png"  class="card-image">
+          <div class="card-content">
+            <h3>Mass Effect</h3>
+            <div class="de">
+              <button type="button" class="btn" >
+                <strong>Download</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+              <button type="button" class="btn details" >
+                <strong>Details</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+            <div class="overload"></div>
+            <div class="op" id="pup">
+              <i class="fas fa-close close" ></i> <!-- زر الإغلاق بـ Font Awesome -->
+              <img src="mass effect.png">
+              <h1>Mass Effect 350$</h1>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <p>Mass Effect تأخذ اللاعبين في مغامرة ملحمية عبر الفضاء، حيث يتحكمون بشخصية "Commander Shepard"، وهو قائد بشري يعمل على حماية المجرة من تهديدات متعددة. تدور القصة في مستقبل بعيد حيث أصبحت البشرية جزءًا من مجتمع بين النجوم مليء بالأجناس المختلفة.</p>
+              <button type="button" class="btn">
+                <strong>Download Now</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+          </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card-container">
+        <div class="card">
+          <div class="discount-ribbon">40% OFF</div>
+          <img src="Demon Souls.png"  class="card-image">
+          <div class="card-content">
+            <h3>DemonSoul</h3>
+            <div class="de">
+              <button type="button" class="btn">
+                <strong>Download</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+              <button type="button" class="btn details" >
+                <strong>Details</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+            <div class="overload"></div>
+            <div class="op" id="pup1">
+                <span class="close" >&times;</span>
+                <img src="Demon Souls.png">
+                <h1>DemonSoul 350$</h1>
+                <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+                <p>Demon's Souls تدور أحداثها في مملكة خيالية تدعى "Boletaria"، والتي تتعرض للدمار بسبب استيقاظ كيان شرير يُعرف باسم "The Old One". يلعب اللاعب دور محارب يُستدعى إلى هذه المملكة للتغلب على الشياطين التي تهددها واستعادة السلام. اللعبة معروفة بتقديمها تحديًا كبيرًا وبيئة مظلمة تملؤها الأسرار.</p>
+                <button type="button" class="btn">
+                  <strong>Download Now</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>
+            </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card">
+          <div class="discount-ribbon">30% OFF</div>
+          
+          <img src="Screenshot 2024-09-13 181242.png"  class="card-image">
+          <div class="card-content">
+            <h3>MetroAwaking</h3>
+            <div class="de">
+              <button type="button" class="btn">
+                <strong>Download</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+              <button type="button" class="btn details" >
+                <strong>Details</strong>
+                <div id="container-stars">
+                    <div id="stars"></div>
+                </div>
+                <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </button>
+            <div class="overload"></div>
+            <div class="op" id="pup2">
+                <span class="close" >&times;</span>
+                <img src="Screenshot 2024-09-13 181242.png">
+                <h1>MetroAwaking 450$</h1>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <p>تدور أحداث MetroAwaking في عام 2035، تتحكم في شخصية "آرتيوم"،يقرر آرتيوم وأصدقاؤه مغادرة الأنفاق المظلمة بحثًا عن حياة جديدة فوق سطح الأرض. اللعبة تأخذ اللاعبين في رحلة عبر روسيا المدمرة، حيث يستكشفون بيئات متنوعة ويواجهون العديد من المخاطر، بما في ذلك المخلوقات المشوهة والبشر المعادين.</p>
+                <button type="button" class="btn">
+                  <strong>Download Now</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>
+            </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>  
+      <div class="oi">
+        <div class="card-container">
+          <div class="card">
+            <div class="discount-ribbon">50% OFF</div>
+            <img src="spider.jpeg"  class="card-image">
+            <div class="card-content">
+              <h3>SpiderMan</h3>
+              <div class="de">
+                <button type="button" class="btn">
+                  <strong>Download</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>
+                <button type="button" class="btn details" >
+                  <strong>Details</strong>
+                  <div id="container-stars">
+                      <div id="stars"></div>
+                  </div>
+                  <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                  </div>
+              </button>
+              <div class="overload"></div>
+              <div class="op" id="pup3">
+                
+                  <span class="close" >&times;</span>
+                  <img src="spider.jpeg">
+                  <h1>SpiderMan 450$</h1>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>في Marvel's Spider-Man، يتحكم اللاعب بشخصية بيتر باركر،تدور أحداث اللعبة في مدينة نيويورك، حيث يتعين على سبايدرمان مواجهة مجموعة من الأعداء الخطرين ومحاولة إيقاف خططهم الإجرامية. اللعبة تقدم قصة جديدة غير مقتبسة مباشرة من الأفلام أو القصص المصورة، لكنها تستلهم منها بشكل كبير.</p>
+                  <button type="button" class="btn">
+                    <strong>Download Now</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+              </div>
+  
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="discount-ribbon">40% OFF</div>
+            <img src="1433877248-call-of-duty-black-ops-iii-key-art.jpg"  class="card-image">
+            <div class="card-content">
+              <h3>Call-Of-Duty</h3>
+              <div class="de">
+                <button type="button" class="btn">
+                  <strong>Download</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>
+                <button type="button" class="btn details" >
+                  <strong>Details</strong>
+                  <div id="container-stars">
+                      <div id="stars"></div>
+                  </div>
+                  <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                  </div>
+              </button>
+              <div class="overload"></div>
+              <div class="op" id="pup4">
+                  <span class="close" >&times;</span>
+                  <img src="1433877248-call-of-duty-black-ops-iii-key-art.jpg">
+                  <h1>Call-Of-Duty 250$</h1>
+                  <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+                  <p>الحرب العالمية الثانية: الألعاب الأولى مثل Call of Duty و Call of Duty 2 ركزت على معارك الحرب العالمية الثانية، حيث يتقمص اللاعب دور جنود في جبهات متعددة.اللعب الجماعي: تقدم السلسلة أحد أشهر أوضاع اللعب الجماعي (Multiplayer) عبر الإنترنت، مع عدد كبير من الخرائط وأنماط اللعب المتنوعة.</p>
+                  <button type="button" class="btn">
+                    <strong>Download Now</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+              </div>
+  
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container">
+          <div class="card">
+            <div class="discount-ribbon">30% OFF</div>
+            <img src="459214499_916457003847614_5807715374586471460_n.jpg"  class="card-image">
+            <div class="card-content">
+              <h3>Pubg Mobile</h3>
+              <div class="de">
+                <button type="button" class="btn">
+                  <strong>Download</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+                
+                  <div id="glow">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                  </div>
+                </button>
+                <button type="button" class="btn details">
+                  <strong>Details</strong>
+                  <div id="container-stars">
+                      <div id="stars"></div>
+                  </div>
+                  <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                  </div>
+              </button>
+              <div class="overload"></div>
+              <div class="op" id="pup5">
+                  <span class="close" >&times;</span>
+                  <img src="459214499_916457003847614_5807715374586471460_n.jpg">
+                  <h1>PubgMobile 250$</h1>
+                  <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+                  <p>في PUBG Mobile، يتم إسقاط 100 لاعب في جزيرة واسعة من خلال طائرة، حيث يتعين عليهم البحث عن الأسلحة والمعدات والبقاء على قيد الحياة. يفوز اللاعب أو الفريق الذي يظل واقفًا في النهاية، حيث تتقلص مساحة اللعب بشكل مستمر مع مرور الوقت، مما يجبر اللاعبين على التحرك والاشتباك مع بعضهم البعض.</p>
+                  <button type="button" class="btn">
+                    <strong>Download Now</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+              </div>
+  
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+        <div class="oi">
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">50% OFF</div>
+              <img src="11900007_1627033874252879_5037495895427595002_n.jpg"  class="card-image">
+              <div class="card-content">
+                <h3>Naruto Shippuden</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details">
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup6">
+                    <span class="close">&times;</span>
+                    <img src="11900007_1627033874252879_5037495895427595002_n.jpg">
+                    <h1>Naruto Shippuden 250$</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p>Naruto Shippuden: Ultimate Ninja Storm تقدم تجربة لعب تتمحور حول المعارك السريعة والمكثفة، مستوحاة بشكل كبير من القصة الأساسية للأنمي. تتضمن اللعبة شخصيات من عالم Naruto بما في ذلك Naruto Uzumaki، Sasuke Uchiha، Sakura Haruno، وعدد كبير من الشخصيات الأخرى التي يمكنك اللعب بها.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+ 
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">40% OFF</div>
+              <img src="Screenshot 2024-09-13 181439.png"  class="card-image">
+              <div class="card-content">
+                <h3>Stellar Blade™</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details" >
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup7">
+                    <span class="close" >&times;</span>
+                    <img src="Screenshot 2024-09-13 181439.png">
+                    <h1>Stellar Blade™ 250$</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>في Stellar Blade، يستكشف اللاعبون عالمًا مستقبليًا مليئًا بالأسرار والأحداث المثيرة. تتميز اللعبة بقصة غنية تركز على رحلة شخصية قوية تتعامل مع تحديات ومعارك ضد أعداء مختلفين.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">30% OFF</div>
+              <img src="Assassin's_Creed_III_Liberation_Cover_Art.jpg"  class="card-image">
+              <div class="card-content">
+                <h3>Assassin's_Creed</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details" >
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup8">
+                    <span class="close" >&times;</span>
+                    <img src="Assassin's_Creed_III_Liberation_Cover_Art.jpg">
+                    <h1>Assassin's_Creed_III 250$</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>تدور أحداث Assassin's Creed في سياقات تاريخية متنوعة، حيث يلعب اللاعب دور قاتل من منظمة سرية تُعرف باسم القتلة (Assassins). هذه المنظمة تتصدى لقوى التمويهات (Templars) التي تسعى للسيطرة على العالم من خلال استخدام قوة القطع الأثرية (Pieces of Eden) التي تمنحهم قوى خارقة.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+          <div class="oi">
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">50% OFF</div>
+              <img src="454547188_813165674307326_6988428303138919232_n.png"  class="card-image">
+              <div class="card-content">
+                <h3>Apex Legend</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details" >
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup9">
+                    <span class="close">&times;</span>
+                    <img src="454547188_813165674307326_6988428303138919232_n.png">
+                    <h1>Apex Legend</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>"Apex Legends" هي لعبة باتل رويال تم تطويرها بواسطة Respawn Entertainment ونشرتها Electronic Arts. صدرت في فبراير 2019 وهي متاحة على عدة منصات، بما في ذلك الحاسوب الشخصي، بلاي ستيشن، وإكس بوكس.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">40% OFF</div>
+              <img src="God-of-war2-cover.jpg"  class="card-image">
+              <div class="card-content">
+                <h3>God-of-war2</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details" >
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup10">
+                    <span class="close" >&times;</span>
+                    <img src="God-of-war2-cover.jpg">
+                    <h1>God-of-war2 250$</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>تدور السلسلة حول كريتوس، المحارب الإسبرطي الذي أصبح إله الحرب بعد مواجهته للآلهة اليونانية في السلسلة الأصلية. في إصدار 2018، تغيرت القصة لتنتقل إلى الميثولوجيا النوردية، حيث يعيش كريتوس مع ابنه أتريوس في عالم جديد مليء بالآلهة والمخلوقات الأسطورية.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <div class="discount-ribbon">30% OFF</div>
+              <img src="grand-theft-auto-iv-free-download-preinstalled-steamrip-960x540.jpg"  class="card-image">
+              <div class="card-content">
+                <h3>GTA IV</h3>
+                <div class="de">
+                  <button type="button" class="btn">
+                    <strong>Download</strong>
+                    <div id="container-stars">
+                      <div id="stars"></div>
+                    </div>
+                  
+                    <div id="glow">
+                      <div class="circle"></div>
+                      <div class="circle"></div>
+                    </div>
+                  </button>
+                  <button type="button" class="btn details" >
+                    <strong>Details</strong>
+                    <div id="container-stars">
+                        <div id="stars"></div>
+                    </div>
+                    <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </button>
+                <div class="overload"></div>
+                <div class="op" id="pup11">
+                    <span class="close"  >&times;</span>
+                    <img src="grand-theft-auto-iv-free-download-preinstalled-steamrip-960x540.jpg">
+                    <h1>GTA IV</h1>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>GTA IV (Grand Theft Auto IV) هي لعبة فيديو من نوع الأكشن والمغامرات، طورتها شركة Rockstar North وأصدرتها Rockstar Games في عام 2008. تدور أحداث اللعبة في مدينة "ليبرتي سيتي"، وهي نسخة خيالية من مدينة نيويورك.</p>
+                    <button type="button" class="btn">
+                      <strong>Download Now</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                </div>
+    
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+          </div>
+          <div class="oi">
+            <div class="card-container">
+              <div class="card">
+                <div class="discount-ribbon">50% OFF</div>
+                <img src="Destiny_2-_The_Final_Shape_cover_art.png"  class="card-image">
+                <div class="card-content">
+                  <h3>The_Final_Shape</h3>
+                  <div class="de">
+                    <button type="button" class="btn">
+                      <strong>Download</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                    <button type="button" class="btn details" >
+                      <strong>Details</strong>
+                      <div id="container-stars">
+                          <div id="stars"></div>
+                      </div>
+                      <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                      </div>
+                  </button>
+                  <div class="overload"></div>
+                  <div class="op" id="pup9">
+                      <span class="close">&times;</span>
+                      <img src="Destiny_2-_The_Final_Shape_cover_art.png">
+                      <h1>The_Final_Shape 250$</h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <p>The Final Shape تكمل قصة Destiny 2 وتعزز من أحداث السلسلة، حيث يتوقع أن تقدم المزيد من المحتوى الجديد، بما في ذلك مهمات جديدة، أعداء، وبيئات لاستكشافها. التوسعة عادةً ما تشمل تغييرات وتحسينات على اللعبة الأساسية، مثل تحديثات في نظام اللعب، إضافات جديدة للأسلحة والدروع، وأحداث خاصة.</p>
+                      <button type="button" class="btn">
+                        <strong>Download Now</strong>
+                        <div id="container-stars">
+                          <div id="stars"></div>
+                        </div>
+                      
+                        <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                        </div>
+                      </button>
+                  </div>
+      
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+  
+            <div class="card-container">
+              <div class="card">
+                <div class="discount-ribbon">40% OFF</div>
+                <img src="Destiny_2_Lightfall_cover.png"  class="card-image">
+                <div class="card-content">
+                  <h3>Lightfall</h3>
+                  <div class="de">
+                    <button type="button" class="btn">
+                      <strong>Download</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                    <button type="button" class="btn details" >
+                      <strong>Details</strong>
+                      <div id="container-stars">
+                          <div id="stars"></div>
+                      </div>
+                      <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                      </div>
+                  </button>
+                  <div class="overload"></div>
+                  <div class="op" id="pup10">
+                      <span class="close" >&times;</span>
+                      <img src="Destiny_2_Lightfall_cover.png">
+                      <h1>Lightfall 250$</h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <p>Lightfall تأخذ اللاعبين إلى مدينة Neomuna، وهي مدينة مستقبلية على كوكب Neptune. التوسعة تقدم تحديات جديدة، أعداء مختلفين، وأماكن جديدة لاستكشافها، حيث تكمل أحداث القصة وتضيف عناصر جديدة للعبة.</p>
+                      <button type="button" class="btn">
+                        <strong>Download Now</strong>
+                        <div id="container-stars">
+                          <div id="stars"></div>
+                        </div>
+                      
+                        <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                        </div>
+                      </button>
+                  </div>
+      
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="card-container">
+              <div class="card">
+                <div class="discount-ribbon">30% OFF</div>
+                <img src="Dead_Space_2_Box_Art_ar.jpg"  class="card-image">
+                <div class="card-content">
+                  <h3>Dead_Space_2</h3>
+                  <div class="de">
+                    <button type="button" class="btn">
+                      <strong>Download</strong>
+                      <div id="container-stars">
+                        <div id="stars"></div>
+                      </div>
+                    
+                      <div id="glow">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                      </div>
+                    </button>
+                    <button type="button" class="btn details" >
+                      <strong>Details</strong>
+                      <div id="container-stars">
+                          <div id="stars"></div>
+                      </div>
+                      <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                      </div>
+                  </button>
+                  <div class="overload"></div>
+                  <div class="op" id="pup11">
+                      <span class="close"  >&times;</span>
+                      <img src="Dead_Space_2_Box_Art_ar.jpg">
+                      <h1>Dead_Space 250$</h1>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <p>تدور أحداث Dead Space 2 بعد خمس سنوات من أحداث الجزء الأول، حيث يعود اللاعبون إلى شخصية Isaac Clarke، وهو مهندس فضاء يكافح للنجاة من وحوش مروعة تُعرف بـ Necromorphs. بعد نجاته من حادث تحطم السفينة في الجزء الأول، يجد Isaac نفسه الآن في محطة فضائية ضخمة تُسمى The Sprawl، التي تعرضت لهجوم من قبل Necromorphs، ويجب عليه الآن مواجهة هذه الكائنات المرعبة والبحث عن وسيلة للنجاة.</p>
+                      <button type="button" class="btn">
+                        <strong>Download Now</strong>
+                        <div id="container-stars">
+                          <div id="stars"></div>
+                        </div>
+                      
+                        <div id="glow">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                        </div>
+                      </button>
+                  </div>
+      
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+  
+            </div>
+          <div class="head2">
+            <img src="last of us.png" class="last">
+            <h2>Up Comming.....!</h2> <br> <br>
+            <h1>The Last of Us - Europe</h1>
+            <p>Part Two is an action, adventure, and survival horror game, played from a third-person perspective. Firearms, improvised weapons, or wireless protocols can be used to detect hostile humans and cannibalistic creatures infected with a mutant strain of the Cordyceps fungus.</p>
+            <div class="de1">
+              <button type="button" class="btn">
+                <strong>Pre-Orderd</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+              <button type="button" class="btn">
+                <strong>Details</strong>
+                <div id="container-stars">
+                  <div id="stars"></div>
+                </div>
+              
+                <div id="glow">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </button>
+              
+            </div>
+          </div>
+          <div class="head3">
+            <img src="images.jpg" >
+            <div class="head3e">
+              <h1>Request A Free consultation</h1>
+              <form class="containerere" action="">
+                <div class="input-containerere">
+                  <div class="input-contentere">
+                    <div class="input-dist">
+                      <div class="input-type">
+                        <input class="input-is" type="email" required="" placeholder="Email" />
+                        <input class="input-is" type="text" required="" placeholder="UserName" />
+                        <input
+                          class="input-is"
+                          type="password"
+                          required=""
+                          placeholder="Password"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="submit-button">Log in</button>
+              </form>
+            </div>
+            
+            
+          </div>
+          <div class="footer">
+            <div class="footer1">
+              <h1>About <span style="color: rgb(106, 58, 150);">GAMING Zone</span></h1>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit voluptates earum itaque repellendus vero excepturi minima. Quam eaque delectus perspiciatis adipisci inventore esse laborum minus, animi, dolorum, suscipit voluptate alias.</p>
+              <ul class="example-2">
+                <li class="icon-content">
+                  <a
+                    href="https://linkedin.com/"
+                    aria-label="LinkedIn"
+                    data-social="linkedin"
+                  >
+                    <div class="filled"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-linkedin"
+                      viewBox="0 0 16 16"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="tooltip">LinkedIn</div>
+                </li>
+                <li class="icon-content">
+                  <a href="https://www.facebook.com/" aria-label="Facebook" data-social="facebook">
+                    <div class="filled"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-facebook"
+                      viewBox="0 0 16 16"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M8.002 0C3.582 0 0 3.582 0 8.002c0 4.418 3.582 8 8.002 8 4.418 0 8-3.582 8-8.002C16.002 3.582 12.42 0 8.002 0zm1.696 8.496H7.956v6.202H5.562V8.496H4.42V6.553h1.142V5.335c0-1.098.542-2.79 2.791-2.79l2.046.007v2.267h-1.49c-.244 0-.586.124-.586.65v1.084h2.07l-.245 1.943z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+                  <div class="tooltip">Facebook</div>
+                </li>
+                <li class="icon-content">
+                  <a href="https://www.github.com/" aria-label="GitHub" data-social="github">
+                    <div class="filled"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-github"
+                      viewBox="0 0 16 16"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="tooltip">GitHub</div>
+                </li>
+                <li class="icon-content">
+                  <a
+                    href="https://www.instagram.com/"
+                    aria-label="Instagram"
+                    data-social="instagram"
+                  >
+                    <div class="filled"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-instagram"
+                      viewBox="0 0 16 16"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="tooltip">Instagram</div>
+                </li>
+                <li class="icon-content">
+                  <a href="https://youtube.com/" aria-label="Youtube" data-social="youtube">
+                    <div class="filled"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-youtube"
+                      viewBox="0 0 16 16"
+                      xml:space="preserve"
+                    >
+                      <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  </a>
+                  <div class="tooltip">Youtube</div>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="footer2">
+              <h1>App &<span style="color: rgb(106, 58, 150);"> PlatForm</span> </h1>
+              <div class="store-buttons">
+                <div class="store-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                  <p>Buy now via <strong>Google Play</strong></p>
+                </div>
+                <div class="store-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="Apple Store">
+                  <p>Buy now via <strong>Apple Store</strong></p>
+                </div>
+                <div class="store-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+                  <p>Buy now via <strong>Steam</strong></p>
+                </div>  
+              </div>
+            </div>
+          </div>
+          
+          <script src="script.js"></script>
+        </body>
+</html>
